@@ -1,4 +1,4 @@
-package com.engie.eea_tech_interview.business.utils.mapper.cachemapper
+package com.example.movie.business.utils.mapper.cachemapper
 
 import com.engie.eea_tech_interview.business.datasource.cache.model.MovieEntity
 import com.engie.eea_tech_interview.business.domain.model.Movie

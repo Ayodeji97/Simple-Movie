@@ -1,8 +1,6 @@
-package com.engie.eea_tech_interview.business.utils.mapper.remotemapper
+package com.example.movie.business.utils.mapper.remotemapper
 
-import com.engie.eea_tech_interview.business.datasource.cache.model.MovieEntity
-import com.engie.eea_tech_interview.business.datasource.remote.model.MovieDto
-import com.engie.eea_tech_interview.business.utils.mapper.base.BaseDtoMapper
+import com.example.movie.business.utils.mapper.base.BaseDtoMapper
 import javax.inject.Inject
 
 class MovieDtoMapper @Inject constructor() : BaseDtoMapper<List<MovieDto>, List<MovieEntity>> {
