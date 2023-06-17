@@ -17,6 +17,8 @@ import com.engie.eea_tech_interview.databinding.FragmentMainBinding
 import com.engie.eea_tech_interview.presentation.adapter.MainAdapter
 import com.engie.eea_tech_interview.presentation.utils.onQueryTextChanged
 import com.engie.eea_tech_interview.presentation.utils.showSnackBar
+import com.example.movie.presentation.main.MainViewEvent
+import com.example.movie.presentation.main.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest

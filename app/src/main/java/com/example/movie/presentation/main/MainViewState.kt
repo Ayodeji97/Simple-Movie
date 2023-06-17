@@ -1,6 +1,7 @@
-package com.engie.eea_tech_interview.presentation.main
+package com.example.movie.presentation.main
 
-import com.engie.eea_tech_interview.business.domain.model.Movie
+import com.example.movie.business.domain.model.Movie
+
 
 data class MainViewState(
     val isLoading: Boolean = false,

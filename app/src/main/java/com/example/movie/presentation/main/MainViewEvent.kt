@@ -1,4 +1,4 @@
-package com.engie.eea_tech_interview.presentation.main
+package com.example.movie.presentation.main
 
 sealed class MainViewEvent {
     data class GetSearchResult(

@@ -1,18 +1,17 @@
-package com.engie.eea_tech_interview.presentation.main
+package com.example.movie.presentation.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.engie.eea_tech_interview.business.domain.usecase.GetMoviesFromDbUseCase
-import com.engie.eea_tech_interview.business.domain.usecase.GetMoviesUseCase
-import com.engie.eea_tech_interview.business.utils.Constants.DEFAULT_SEARCH_QUERY
-import com.engie.eea_tech_interview.business.utils.Result
-import com.engie.eea_tech_interview.business.utils.mapper.cachemapper.MovieCacheMapper
+import com.example.movie.business.domain.usecase.GetMoviesFromDbUseCase
+import com.example.movie.business.domain.usecase.GetMoviesUseCase
+import com.example.movie.business.utils.Constants.DEFAULT_SEARCH_QUERY
+import com.example.movie.business.utils.mapper.cachemapper.MovieCacheMapper
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import com.example.movie.business.utils.Result
 
 @HiltViewModel
 class MainViewModel @Inject constructor(

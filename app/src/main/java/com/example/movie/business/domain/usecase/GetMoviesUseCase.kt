@@ -1,8 +1,9 @@
 package com.example.movie.business.domain.usecase
 
 
-import com.engie.eea_tech_interview.business.repository.GetMoviesRepository
 import com.example.movie.business.domain.model.Movie
+import com.example.movie.business.repository.GetMoviesRepository
+import com.example.movie.business.utils.Result
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
