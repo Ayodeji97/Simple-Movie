@@ -1,0 +1,65 @@
+name: Build
+
+on: [pull_request, push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+      - name: Build the app
+        run: ./gradlew build
+
+test_job:
+  name: Test
+  runs-on: ubuntu-latest
+  continue-on-error: true
+  steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Set Up JDK
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+
+    - name: Run Test
+      run: ./gradlew test
+
+    - name: Build Gradle
+      run: ./gradlew build
+
+    - name: Build Project
+      run: ./gradlew assemble
+
+    - name: Build Debug APK
+      run: ./gradlew assembleDebug
+
+    - name: Upload APK
+      uses: actions/upload-artifact@v3.1.0
+      with:
+        name: app
+        path: app/build/outputs/apk/debug/app-debug.apk
+
+
+    - name: Restore Cache
+      uses: actions/cache@v2
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+        restore-keys: |
+          ${{ runner.os }}-gradle-
+    - name: Run Debug Tests
+      run: ./gradlew testDebugUnitTest --continue
+
+    - name: Upload Test Reports
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-reports
+        path: '**/build/reports/tests/'
