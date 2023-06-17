@@ -1,8 +1,7 @@
 package com.example.movie.di.daggerhilt
 
-import androidx.viewbinding.BuildConfig
-import com.engie.eea_tech_interview.business.datasource.remote.MovieApiService
-import com.engie.eea_tech_interview.business.utils.Constants.BASE_URL
+import androidx.multidex.BuildConfig
+import com.example.movie.business.datasource.remote.MovieApiService
 import com.example.movie.business.utils.Constants.BASE_URL
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder

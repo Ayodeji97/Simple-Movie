@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_main">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.movie.presentation.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main"
+        >
+        <action
+            android:id="@+id/action_mainFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.movie.presentation.detail.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail"
+        >
+        <argument
+            android:name="movie"
+            app:argType="com.example.movie.business.domain.model.Movie"
+            app:nullable="true" />
+    </fragment>
 
 </navigation>

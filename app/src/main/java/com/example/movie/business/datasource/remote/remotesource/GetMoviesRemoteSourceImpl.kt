@@ -1,16 +1,16 @@
-package com.engie.eea_tech_interview.business.datasource.remote.remotesource
+package com.example.movie.business.datasource.remote.remotesource
 
-import com.engie.eea_tech_interview.business.datasource.remote.MovieApiService
-import com.engie.eea_tech_interview.business.datasource.remote.model.SearchResultDto
-import com.engie.eea_tech_interview.business.utils.Constants.MOVIE_API_KEY
-import com.engie.eea_tech_interview.di.daggerhilt.dispatcher.IoDispatcher
-import com.example.movie.business.datasource.remote.remotesource.GetMoviesRemoteSource
+import com.example.movie.business.datasource.remote.MovieApiService
+import com.example.movie.business.datasource.remote.model.SearchResultDto
+import com.example.movie.business.utils.Constants.MOVIE_API_KEY
+import com.example.movie.di.daggerhilt.dispatcher.IoDispatcher
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import org.json.JSONObject
 import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
+import com.example.movie.business.utils.Result
 
 class GetMoviesRemoteSourceImpl @Inject constructor(
     private val movieApiService: MovieApiService,
@@ -24,7 +24,6 @@ class GetMoviesRemoteSourceImpl @Inject constructor(
                     val movies = apiResponse.body()
                     Result.Success(movies)
                 } else {
-                    @Suppress("BlockingMethodInNonBlockingContext")
                     val errorMessageObject = apiResponse.errorBody()?.string()
                     apiResponse.errorBody()?.close()
                     val errorMessage = errorMessageObject?.let {
