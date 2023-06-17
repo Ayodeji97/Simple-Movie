@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="primary">#00b68b</color>
+    <color name="primaryDark">#008d6c</color>
+    <color name="accent">#1f106d</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="transparent_text_color">#8491AB</color>
+    <color name="divider_color">#DDE2ED</color>
+    <color name="card_view_bg_color">#EBEFF8</color>
+    <color name="background_entire">#FFF4F6FB</color>
+    <color name="management_background_bg">#E1EFFF</color>
+    <color name="border_stroke_color">#DBDBDB</color>
 </resources>

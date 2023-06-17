@@ -2,6 +2,8 @@ package com.example.movie.presentation.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movie.business.domain.model.Movie
+import com.example.movie.databinding.MovieListItemBinding
+import com.example.movie.presentation.utils.loadImage
 
 
 class MainViewHolder(
@@ -10,7 +12,7 @@ class MainViewHolder(
 ) : RecyclerView.ViewHolder(ui.root) {
 
     fun bind(movie: Movie) {
-        ui.apply {
+        with(ui) {
             movieTitleTv.text = movie.title
             movieAvatarIv.loadImage(movie.posterPath)
         }

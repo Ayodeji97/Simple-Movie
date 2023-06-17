@@ -3,8 +3,8 @@ package com.example.movie.presentation.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
-import com.engie.eea_tech_interview.databinding.MovieListItemBinding
 import com.example.movie.business.domain.model.Movie
+import com.example.movie.databinding.MovieListItemBinding
 
 class MainAdapter(
     private val onMovieClicked: (Movie) -> Unit

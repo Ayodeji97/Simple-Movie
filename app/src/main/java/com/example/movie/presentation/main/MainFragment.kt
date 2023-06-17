@@ -1,4 +1,4 @@
-package com.engie.eea_tech_interview.presentation.main
+package com.example.movie.presentation.main
 
 import android.os.Bundle
 import android.view.*
@@ -12,13 +12,11 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.engie.eea_tech_interview.R
-import com.engie.eea_tech_interview.databinding.FragmentMainBinding
-import com.engie.eea_tech_interview.presentation.adapter.MainAdapter
-import com.engie.eea_tech_interview.presentation.utils.onQueryTextChanged
-import com.engie.eea_tech_interview.presentation.utils.showSnackBar
-import com.example.movie.presentation.main.MainViewEvent
-import com.example.movie.presentation.main.MainViewModel
+import com.example.movie.R
+import com.example.movie.databinding.FragmentMainBinding
+import com.example.movie.presentation.adapter.MainAdapter
+import com.example.movie.presentation.utils.onQueryTextChanged
+import com.example.movie.presentation.utils.showSnackBar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest

@@ -6,7 +6,7 @@ import android.widget.ImageView
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
-import com.engie.eea_tech_interview.R
+import com.example.movie.R
 import com.google.android.material.snackbar.Snackbar
 
 fun ImageView.loadImage(url: String, placeHolder: Int = R.drawable.vikings) {
