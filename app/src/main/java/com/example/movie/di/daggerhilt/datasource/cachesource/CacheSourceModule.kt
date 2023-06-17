@@ -2,9 +2,9 @@ package com.example.movie.di.daggerhilt.datasource.cachesource
 
 import android.app.Application
 import androidx.room.Room
-import com.engie.eea_tech_interview.business.datasource.cache.MovieDatabase
-import com.engie.eea_tech_interview.business.datasource.cache.dao.MovieDao
-import com.engie.eea_tech_interview.business.utils.Constants.DATABASE_NAME
+import com.example.movie.business.datasource.cache.MovieDatabase
+import com.example.movie.business.datasource.cache.dao.MovieDao
+import com.example.movie.business.utils.Constants.DATABASE_NAME
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

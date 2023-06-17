@@ -1,4 +1,4 @@
-package com.engie.eea_tech_interview.business.domain.model
+package com.example.movie.business.domain.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

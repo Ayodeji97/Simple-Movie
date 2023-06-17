@@ -3,8 +3,8 @@ package com.engie.eea_tech_interview.business.datasource.remote.remotesource
 import com.engie.eea_tech_interview.business.datasource.remote.MovieApiService
 import com.engie.eea_tech_interview.business.datasource.remote.model.SearchResultDto
 import com.engie.eea_tech_interview.business.utils.Constants.MOVIE_API_KEY
-import com.engie.eea_tech_interview.business.utils.Result
 import com.engie.eea_tech_interview.di.daggerhilt.dispatcher.IoDispatcher
+import com.example.movie.business.datasource.remote.remotesource.GetMoviesRemoteSource
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import org.json.JSONObject

@@ -1,7 +1,8 @@
-package com.engie.eea_tech_interview.business.datasource.remote.remotesource
+package com.example.movie.business.datasource.remote.remotesource
 
-import com.engie.eea_tech_interview.business.datasource.remote.model.SearchResultDto
-import com.engie.eea_tech_interview.business.utils.Result
+
+import com.example.movie.business.datasource.remote.model.SearchResultDto
+import com.example.movie.business.utils.Result
 
 interface GetMoviesRemoteSource {
     suspend fun getMovies(searchQuery: String): Result<SearchResultDto>

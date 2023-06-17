@@ -2,6 +2,7 @@ package com.example.movie.business.utils.mapper.cachemapper
 
 
 import com.example.movie.business.datasource.cache.model.MovieEntity
+import com.example.movie.business.domain.model.Movie
 import com.example.movie.business.utils.mapper.base.BaseEntityMapper
 import javax.inject.Inject
 

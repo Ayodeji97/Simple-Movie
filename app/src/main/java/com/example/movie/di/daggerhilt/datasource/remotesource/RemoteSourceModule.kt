@@ -1,6 +1,6 @@
 package com.example.movie.di.daggerhilt.datasource.remotesource
 
-import com.engie.eea_tech_interview.business.datasource.remote.remotesource.GetMoviesRemoteSource
+import com.example.movie.business.datasource.remote.remotesource.GetMoviesRemoteSource
 import com.engie.eea_tech_interview.business.datasource.remote.remotesource.GetMoviesRemoteSourceImpl
 import dagger.Binds
 import dagger.Module

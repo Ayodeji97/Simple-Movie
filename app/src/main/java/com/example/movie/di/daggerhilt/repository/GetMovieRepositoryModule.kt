@@ -1,7 +1,7 @@
 package com.example.movie.di.daggerhilt.repository
 
-import com.engie.eea_tech_interview.business.repository.GetMoviesRepository
-import com.engie.eea_tech_interview.business.repository.GetMoviesRepositoryImpl
+import com.example.movie.business.repository.GetMoviesRepository
+import com.example.movie.business.repository.GetMoviesRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
