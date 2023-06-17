@@ -1,5 +1,7 @@
 package com.example.movie.business.utils.mapper.remotemapper
 
+import com.example.movie.business.datasource.cache.model.MovieEntity
+import com.example.movie.business.datasource.remote.model.MovieDto
 import com.example.movie.business.utils.mapper.base.BaseDtoMapper
 import javax.inject.Inject
 

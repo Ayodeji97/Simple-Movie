@@ -1,8 +1,8 @@
 package com.example.movie.business.utils.mapper.cachemapper
 
-import com.engie.eea_tech_interview.business.datasource.cache.model.MovieEntity
-import com.engie.eea_tech_interview.business.domain.model.Movie
-import com.engie.eea_tech_interview.business.utils.mapper.base.BaseEntityMapper
+
+import com.example.movie.business.datasource.cache.model.MovieEntity
+import com.example.movie.business.utils.mapper.base.BaseEntityMapper
 import javax.inject.Inject
 
 class MovieCacheMapper @Inject constructor() : BaseEntityMapper<List<MovieEntity>, List<Movie>> {
