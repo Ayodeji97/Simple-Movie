@@ -12,7 +12,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movie.R
 import com.example.movie.databinding.FragmentMainBinding
 import com.example.movie.presentation.adapter.MainAdapter
@@ -89,7 +88,6 @@ class MainFragment : Fragment() {
 
         with(ui.recyclerViewMovie) {
             adapter = mainAdapter
-            //layoutManager = LinearLayoutManager(requireContext())
             layoutManager = GridLayoutManager(requireContext(), 2)
             setHasFixedSize(true)
         }
