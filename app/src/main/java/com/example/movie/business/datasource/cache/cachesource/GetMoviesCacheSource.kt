@@ -15,6 +15,6 @@ class GetMoviesCacheSource @Inject constructor(
     fun getMovies(): Flow<List<MovieEntity>> =
         movieDao.getMovies()
 
-    fun getMovie(movieId: Int): MovieEntity =
+    suspend fun getMovie(movieId: Int): MovieEntity =
         movieDao.getMovie(movieId)
 }

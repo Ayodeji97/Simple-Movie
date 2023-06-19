@@ -11,6 +11,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movie.R
 import com.example.movie.databinding.FragmentMainBinding
@@ -81,17 +82,16 @@ class MainFragment : Fragment() {
     private fun initRecyclerView() {
         mainAdapter = MainAdapter(
             onMovieClicked = { movie ->
-                val action = MainFragmentDirections.actionMainFragmentToDetailFragment(movie)
+                val action = MainFragmentDirections.actionMainFragmentToDetailFragment(movie.id)
                 findNavController().navigate(action)
             }
         )
 
-        ui.apply {
-            recyclerViewMovie.apply {
-                adapter = mainAdapter
-                layoutManager = LinearLayoutManager(requireContext())
-                setHasFixedSize(true)
-            }
+        with(ui.recyclerViewMovie) {
+            adapter = mainAdapter
+            //layoutManager = LinearLayoutManager(requireContext())
+            layoutManager = GridLayoutManager(requireContext(), 2)
+            setHasFixedSize(true)
         }
     }
 

@@ -4,7 +4,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.movie.business.domain.model.Movie
 import com.example.movie.databinding.MovieListItemBinding
 import com.example.movie.presentation.utils.loadImage
-import com.example.movie.presentation.utils.loadImage2
 
 
 class MainViewHolder(
@@ -15,7 +14,7 @@ class MainViewHolder(
     fun bind(movie: Movie) {
         with(ui) {
             movieTitleTv.text = movie.title
-            movieAvatarIv.loadImage2(movie.posterPath)
+            movieAvatarIv.loadImage(movie.posterPath)
         }
     }
 

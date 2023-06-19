@@ -23,9 +23,8 @@
         tools:layout="@layout/fragment_detail"
         >
         <argument
-            android:name="movie"
-            app:argType="com.example.movie.business.domain.model.Movie"
-            app:nullable="true" />
+            android:name="movieId"
+            app:argType="integer" />
     </fragment>
 
 </navigation>

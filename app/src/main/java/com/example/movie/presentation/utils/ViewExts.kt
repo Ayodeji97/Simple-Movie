@@ -1,25 +1,24 @@
 package com.example.movie.presentation.utils
 
+import android.os.Build
 import android.os.CountDownTimer
+import android.provider.Settings.System.DATE_FORMAT
 import android.view.View
 import android.widget.ImageView
+import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.movie.R
 import com.google.android.material.snackbar.Snackbar
 import com.squareup.picasso.Picasso
+import java.time.ZoneId
+import java.time.ZonedDateTime
+import java.time.format.DateTimeFormatter
 
-const val IMAGE_PREFIX = "https://image.tmdb.org/t/p/original"
+private const val DATE_FORMATTER = "yyyy-MMM-dd"
+
 fun ImageView.loadImage(url: String, placeHolder: Int = R.drawable.vikings) {
-    Glide.with(this.context)
-        .load(url)
-        .placeholder(placeHolder)
-        .error(placeHolder)
-        .into(this)
-}
-
-fun ImageView.loadImage2(url: String, placeHolder: Int = R.drawable.vikings) {
     Picasso.get().load(url).placeholder(placeHolder).into(this)
 }
 
@@ -54,3 +53,5 @@ fun Fragment.showSnackBar(view: View, message: String) {
     ).setAction("ok") {
     }.show()
 }
+
+

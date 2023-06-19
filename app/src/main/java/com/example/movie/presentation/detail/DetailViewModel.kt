@@ -28,9 +28,9 @@ class DetailViewModel @Inject constructor(
     private fun getMovie(movieId: Int) {
         viewModelScope.launch {
             _getMovieDetailViewState.value.let {state->
-                state.copy(isLoading = true)
-                val movie = getMoviesFromDbUseCase.invoke(movieId)
-                state.copy(isLoading = false, movie = movie)
+                _getMovieDetailViewState.value = state.copy(isLoading = true)
+                val movie = getMoviesFromDbUseCase(movieId)
+                _getMovieDetailViewState.value = state.copy(isLoading = false, movie = movie)
             }
         }
     }
