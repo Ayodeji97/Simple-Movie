@@ -1,6 +1,7 @@
 package com.example.movie.business.repository
 
 
+import android.util.Log
 import com.example.movie.business.datasource.remote.remotesource.GetMoviesRemoteSource
 import com.example.movie.business.datasource.cache.cachesource.GetMoviesCacheSource
 import com.example.movie.business.datasource.cache.model.MovieEntity
@@ -24,6 +25,8 @@ class GetMoviesRepositoryImpl @Inject constructor(
                 is Result.Success -> {
                     response.data?.let {
                         val movies = movieDtoMapper.transformToEntity(it.results)
+                        Log.d("CCCC", "$it")
+                        Log.d("CCCC11", "$movies")
                         if (movies.isNotEmpty()) {
                             getMoviesCacheSource.saveMovies(movies)
                         }

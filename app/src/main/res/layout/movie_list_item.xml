@@ -30,7 +30,7 @@
                 android:id="@+id/movie_avatar_iv"
                 android:layout_width="@dimen/margin_0"
                 android:layout_height="@dimen/margin_0"
-                android:scaleType="fitXY"
+                android:scaleType="centerCrop"
                 android:src="@drawable/avatar_icon"
                 app:layout_constraintBottom_toBottomOf="@+id/horizontal_divider"
                 app:layout_constraintEnd_toEndOf="parent"

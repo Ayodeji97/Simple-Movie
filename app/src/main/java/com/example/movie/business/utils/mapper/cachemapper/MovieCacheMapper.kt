@@ -10,7 +10,7 @@ class MovieCacheMapper @Inject constructor() : BaseEntityMapper<List<MovieEntity
     override fun transformToDomain(type: List<MovieEntity>): List<Movie> =
         type.map { movieEntity ->
             Movie(
-                posterPath = movieEntity.posterPath,
+                posterPath = IMAGE_PREFIX + movieEntity.posterPath,
                 overview = movieEntity.overview,
                 releaseDate = movieEntity.releaseDate,
                 originalLanguage = movieEntity.originalLanguage,
@@ -21,4 +21,8 @@ class MovieCacheMapper @Inject constructor() : BaseEntityMapper<List<MovieEntity
                 id = movieEntity.id
             )
         }
+
+    companion object {
+        const val IMAGE_PREFIX = "https://image.tmdb.org/t/p/original"
+    }
 }

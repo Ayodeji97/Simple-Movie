@@ -1,9 +1,7 @@
 package com.example.movie.business.datasource.remote.model
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import com.google.gson.annotations.SerializedName
 
-@JsonClass(generateAdapter = true)
 data class SearchResultDto(
-    @Json(name = "results") val results: List<MovieDto>
+    @SerializedName("results") val results: List<MovieDto>
 )

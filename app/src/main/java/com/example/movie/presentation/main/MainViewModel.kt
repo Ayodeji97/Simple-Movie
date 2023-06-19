@@ -59,7 +59,7 @@ class MainViewModel @Inject constructor(
         viewModelScope.launch {
             _getSearchResultViewState.value.let { state ->
                 getMoviesFromDbUseCase.invoke().collect { movies ->
-                    if (movies.isNullOrEmpty()) {
+                    if (movies.isEmpty()) {
                         getSearchResult(DEFAULT_SEARCH_QUERY)
                     } else {
                         _getSearchResultViewState.value =

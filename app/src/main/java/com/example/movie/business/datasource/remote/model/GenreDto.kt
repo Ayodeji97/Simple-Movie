@@ -1,10 +1,8 @@
 package com.example.movie.business.datasource.remote.model
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import com.google.gson.annotations.SerializedName
 
-@JsonClass(generateAdapter = true)
 data class GenreDto(
-    @Json(name = "id") val id: Int,
-    @Json(name = "name") val name: String
+    @SerializedName("id") val id: Int,
+    @SerializedName("name") val name: String
 )
