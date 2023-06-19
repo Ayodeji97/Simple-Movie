@@ -9,4 +9,6 @@ import kotlinx.coroutines.flow.Flow
 interface GetMoviesRepository {
     suspend fun getMovies(searchQuery: String): Flow<Result<List<Movie>>>
     suspend fun getMoviesFromDb(): Flow<List<MovieEntity>>
+
+    suspend fun getMovie(movieId: Int): MovieEntity
 }

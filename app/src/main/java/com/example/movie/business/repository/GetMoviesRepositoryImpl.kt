@@ -45,4 +45,7 @@ class GetMoviesRepositoryImpl @Inject constructor(
 
     override suspend fun getMoviesFromDb(): Flow<List<MovieEntity>> =
         getMoviesCacheSource.getMovies()
+
+    override suspend fun getMovie(movieId: Int): MovieEntity =
+        getMoviesCacheSource.getMovie(movieId)
 }
