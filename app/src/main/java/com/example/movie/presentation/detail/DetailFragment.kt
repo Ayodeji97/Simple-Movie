@@ -32,17 +32,13 @@ class DetailFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // return super.onCreateView(inflater, container, savedInstanceState)
         currentBinding = FragmentDetailBinding.inflate(inflater)
         return ui.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //movieId = DetailFragmentArgs.fromBundle(requireArguments()).movie
-//        movie?.let {
-//            updateView(it)
-//        }
+
         movieId = DetailFragmentArgs.fromBundle(requireArguments()).movieId
 
         detailViewModel.onTriggeredEvent(DetailViewEvent.GetMovieDetail(movieId))
@@ -67,7 +63,6 @@ class DetailFragment : Fragment() {
             state.movie?.let {
                 updateView(it)
             }
-
         }
     }
 
