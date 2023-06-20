@@ -13,6 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.movie.R
+import com.example.movie.business.domain.model.Movie
 import com.example.movie.databinding.FragmentMainBinding
 import com.example.movie.presentation.adapter.MainAdapter
 import com.example.movie.presentation.utils.onQueryTextChanged
@@ -63,13 +64,9 @@ class MainFragment : Fragment() {
                     } else {
                         state.searchResult?.let { movies ->
                             if (movies.isEmpty()) {
-                                fragmentErrorTv.visibility = View.VISIBLE
-                                recyclerViewMovie.visibility = View.GONE
-                                fragmentErrorTv.text = getString(R.string.search_not_found)
+                                showEmptyStateView()
                             } else {
-                                fragmentErrorTv.visibility = View.GONE
-                                recyclerViewMovie.visibility = View.VISIBLE
-                                mainAdapter.submitList(movies)
+                                showItemView(movies)
                             }
                         }
                     }
@@ -123,6 +120,22 @@ class MainFragment : Fragment() {
         lifecycleScope.launch {
             delay(100)
             ui.recyclerViewMovie.scrollToPosition(0)
+        }
+    }
+
+    private fun showEmptyStateView() {
+        with(ui) {
+            fragmentErrorTv.visibility = View.VISIBLE
+            recyclerViewMovie.visibility = View.GONE
+            fragmentErrorTv.text = getString(R.string.search_not_found)
+        }
+    }
+
+    private fun showItemView(movies: List<Movie>) {
+        with(ui) {
+            fragmentErrorTv.visibility = View.GONE
+            recyclerViewMovie.visibility = View.VISIBLE
+            mainAdapter.submitList(movies)
         }
     }
 
