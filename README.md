@@ -16,18 +16,14 @@ a detail page for these movies accessible through each item in the list.
 - Roboelectric for Integration testing
 -
 # Tech Stack
-The project, as you might have noticed, is not completely empty. In order to make you life easier, we've implemented already the networking layer
-and the dependency injection structure. Here the list of libraries used:
+ Here the list of libraries used:
 - Retrofit
 - OkHttp
 - Gson
+- Coroutine
 - AndroidX
 - Kotlin Flow
 - Retrofit 2
 - ViewBinding
 - ViewModel
 - Navigation Component
-
-Last but not least, since we are taking advantage of the Movie API, what best way to wish you good luck if not with a movie quote:<br />
-> “Sometimes it is the people who no one imagines anything of who do the things that no one can imagine.”<br />
-–Alan Turing (The Imitation Game)
