@@ -25,8 +25,6 @@ class GetMoviesRepositoryImpl @Inject constructor(
                 is Result.Success -> {
                     response.data?.let {
                         val movies = movieDtoMapper.transformToEntity(it.results)
-                        Log.d("CCCC", "$it")
-                        Log.d("CCCC11", "$movies")
                         if (movies.isNotEmpty()) {
                             getMoviesCacheSource.saveMovies(movies)
                         }
