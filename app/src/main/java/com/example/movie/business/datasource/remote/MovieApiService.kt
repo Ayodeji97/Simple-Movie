@@ -1,6 +1,5 @@
 package com.example.movie.business.datasource.remote
 
-import com.example.movie.business.datasource.remote.model.GenreResultDto
 import com.example.movie.business.datasource.remote.model.SearchResultDto
 import retrofit2.Response
 import retrofit2.http.GET
