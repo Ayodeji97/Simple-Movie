@@ -12,9 +12,4 @@ interface MovieApiService {
         @Query("api_key") apiKey: String,
         @Query("query") query: String,
     ): Response<SearchResultDto>
-
-    @GET("genre/movie/list")
-    suspend fun getGenre(
-        @Query("api_key") apiKey: String
-    ): Response<GenreResultDto>
 }
